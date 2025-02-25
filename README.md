@@ -24,17 +24,17 @@ This guide explains how to combine web scraping with LangChain for real-world LL
 
 ## Using Web Scraping to Power Your LLM Applications
 
-Web scraping extracts data from websites to fuel RAG ([Retrieval-Augmented Generation](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)) applications and leverage LLMs ([Large Language Models](https://www.ibm.com/think/topics/large-language-models)). It bridges the gap between static databases and the real-time, domain-specific, or large datasets these applications require.
+Web scraping extracts data from websites to fuel RAG ([Retrieval-Augmented Generation](https://brightdata.com/blog/web-data/rag-explained)) applications and leverage LLMs ([Large Language Models](https://www.ibm.com/think/topics/large-language-models)). It bridges the gap between static databases and the real-time, domain-specific, or large datasets these applications require.
 
 ## Benefits and Challenges of Using Scraped Data in LangChain
 
-[LangChain](https://www.langchain.com/) integrates LLMs with diverse data sources for tasks like analysis, summarization, and Q&A. However, gathering high-quality data is challenging due to anti-bot measures, CAPTCHAs, and dynamic websites. Bright Data’s Web Scraper API addresses these issues with features like IP rotation, CAPTCHA solving, and JavaScript rendering, ensuring efficient and reliable data collection through simple API calls.
+[LangChain](https://www.langchain.com/) integrates LLMs with diverse data sources for tasks like analysis, summarization, and Q&A. However, gathering high-quality data is challenging due to anti-bot measures, CAPTCHAs, and dynamic websites. Bright Data’s [Web Scraper API](https://brightdata.com/products/web-scraper) addresses these issues with features like IP rotation, CAPTCHA solving, and JavaScript rendering, ensuring efficient and reliable data collection through simple API calls.
 
 ## LangChain Web Scraping Powered By Bright Data: Step-by-Step Guide
 
 Learn to build a LangChain web scraping script that retrieves content from a CNN article using Bright Data’s Web Scraper API, then sends it to OpenAI for summarization. We’ll use [this CNN article](https://www.cnn.com/2024/12/16/weather/white-christmas-forecast-climate/) as our target.
 
-![CNN article on Christmas](https://brightdata.com/wp-content/uploads/2024/12/image-131-1024x492.png)
+![CNN article on Christmas](https://github.com/luminati-io/langchain-web-scraping/blob/main/Images/image-131-1024x492.png)
 
 This simple example can be easily extended with additional LangChain features, such as creating an AG chatbot based on SERP data.
 
@@ -128,23 +128,23 @@ To set up Web Scraper API, refer to the [official documentation](https://docs.br
 
 Create a Bright Data account if you don't have one yet. After logging in, go to your account dashboard. Here, click on the “Web Scraper API” button on the left:
 
-![Choosing Web Scraper API from the menu on the left](https://brightdata.com/wp-content/uploads/2024/12/image-133-1024x489.png)
+![Choosing Web Scraper API from the menu on the left](https://github.com/luminati-io/langchain-web-scraping/blob/main/Images/image-133-1024x489.png)
 
 Since the target site is [CNN.com](http://cnn.com/), type “cnn” in the search input and select the “CNN news — Collecy by URL” scraper:
 
-![Searching for hte CNN Scraper API](https://brightdata.com/wp-content/uploads/2024/12/image-134-1024x486.png)
+![Searching for hte CNN Scraper API](https://github.com/luminati-io/langchain-web-scraping/blob/main/Images/image-134-1024x486.png)
 
 On the current page, click on the **Create token** button to generate a [Bright Data API token](https://docs.brightdata.com/general/account/api-token):
 
-![Creating a new token for the API](https://brightdata.com/wp-content/uploads/2024/12/image-135-1024x408.png)
+![Creating a new token for the API](https://github.com/luminati-io/langchain-web-scraping/blob/main/Images/image-135-1024x408.png)
 
 This should open the following modal, where you can configure the details of your token:
 
-![Configuring the details of the new token](https://brightdata.com/wp-content/uploads/2024/12/image-136.png)
+![Configuring the details of the new token](https://github.com/luminati-io/langchain-web-scraping/blob/main/Images/image-136.png)
 
 Once done, click **Save** and copy the value of your Bright Data API token.
 
-![Once you clicked save, the new token is shown](https://brightdata.com/wp-content/uploads/2024/12/image-137.png)
+![Once you clicked save, the new token is shown](https://github.com/luminati-io/langchain-web-scraping/blob/main/Images/image-137.png)
 
 In your `.env` file, store this information as below:
 
@@ -156,7 +156,7 @@ Replace `<YOUR_BRIGHT_DATA_API_TOKEN>` with the value you copied from the moda
 
 Your CNN news Web Scraper API page should now look similar to the example below:
 
-![The CNN Scraper API page ](https://brightdata.com/wp-content/uploads/2024/12/image-138-1024x492.png)
+![The CNN Scraper API page ](https://github.com/luminati-io/langchain-web-scraping/blob/main/Images/image-138-1024x492.png)
 
 ### Step #5: Use Bright Data for Web Scraping
 
@@ -312,7 +312,7 @@ CONTENT:
 
 Here is what you will see when you pass it to ChatGPT:
 
-![Passing the task of summarizing the content in less than 100 words](https://brightdata.com/wp-content/uploads/2024/12/image-139-1024x626.png)
+![Passing the task of summarizing the content in less than 100 words](https://github.com/luminati-io/langchain-web-scraping/blob/main/Images/image-139-1024x626.png)
 
 ### Step #8: Integrate OpenAI
 
